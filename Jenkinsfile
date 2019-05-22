@@ -13,19 +13,8 @@ pipeline {
       }
     }
     stage('Test') {
-      parallel {
-        stage('Test') {
-          steps {
-            sh 'echo \'Hi from new pipeline\''
-            sh 'echo \'Hi from test\''
-            sh 'echo \'hi again\''
-          }
-        }
-        stage('Parallel step') {
-          steps {
-            echo 'Hi parallel'
-          }
-        }
+      steps {
+        sh 'mvn test'
       }
     }
   }
