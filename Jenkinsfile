@@ -14,8 +14,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh '''echo \'Hi from new pipeline\'
-'''
+        sh 'echo \'Hi from new pipeline\''
         sh 'echo \'Hi from test\''
         sh 'echo \'hi again\''
       }
